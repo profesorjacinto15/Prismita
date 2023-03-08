@@ -1,6 +1,14 @@
 import javax.swing.JOptionPane;
+
+/**
+ * Clase principal que utiliza Prismatri
+ */
 public class Main {
 
+    /**
+     * Metodo que lee un valor
+     * @return el valor leido con un JOptionPane
+     */
     public static double leerValor() {
         String dato ="";
         do {
@@ -9,10 +17,19 @@ public class Main {
         return Double.parseDouble(dato);
     }
 
+    /**
+     * Metodo que imprime un valor
+     * @param valor a imprimir
+     */
     public static void imprimirValor(String valor) {
         JOptionPane.showMessageDialog(null, valor);
     }
 
+    /**
+     * Metodo que comprueba si un valor es numérico
+     * @param valor true si numérico y false en caso contrario
+     * @return
+     */
     public static boolean esNumero(String valor) {
         for(int i=0;i<valor.length();i++) {
             if (Character.isDigit(valor.charAt(i))!=true) {
@@ -21,6 +38,11 @@ public class Main {
         }
         return true;
     }
+
+    /**
+     * Metodo que crea los objetos
+     * @param args no tiene
+     */
     public static void main(String[] args) {
 
         imprimirValor("Primer Prisma");
